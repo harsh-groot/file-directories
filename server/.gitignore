@@ -1,0 +1,16 @@
+.env
+/config/default.json
+/documents
+/node_modules
+/public/images/*
+modules/config.js
+documents/reports/*
+*.pem
+*.key
+*-lock.json
+*.png
+images/uploaded/1670999175182-165612252.jpeg
+*.jpg
+*.jpeg
+*.gif
+*.webp
