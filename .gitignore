@@ -3,3 +3,38 @@
 /server/.env
 /server/config/default.json
 /server/files
+/client/.pnp
+/client.pnp.js
+
+# testing
+/client/coverage
+
+# production
+/client/build
+
+# misc
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
+
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
+
+/server/config/default.json
+/server/documents
+/server/node_modules
+/server/public/images/*
+/server/modules/config.js
+/server/documents/reports/*
+/server/*.pem
+/server/*.key
+/server/*-lock.json
+/server/*.png
+/server/images/uploaded/1670999175182-165612252.jpeg
+/server/*.jpg
+/server/*.jpeg
+/server/*.gif
+/server/*.webp

@@ -1,4 +1,5 @@
 import {
+  Button,
   Collapse,
   List,
   ListItemButton,
@@ -33,7 +34,12 @@ function FileUpload(props) {
   };
 
   const handleFileChange = (e) => {
-    fileUpload(e.target.files[0]);
+    setFile(e.target.files[0])
+  }
+
+  const handleFileSubmit = (e) => {
+    e.preventDefault()
+    fileUpload(file);
   }
 
   const handleFolderClick = () => {
@@ -41,9 +47,13 @@ function FileUpload(props) {
   };
 
   const handleFolderChange = (e) => {
-    folderUpload(e.target.files);
+    setFile(e.target.files)
   }
 
+  const handleFolderSubmit = (e) => {
+    e.preventDefault();
+    folderUpload(file);
+  }
   return (
     <div>
       <List
@@ -70,6 +80,8 @@ function FileUpload(props) {
             </ListItemIcon>
             <ListItemText onClick={handleFileClick} secondary="Files" />
             </ListItemButton>
+            <Button onClick={(e) => handleFileSubmit(e)} >Upload</Button>
+
           </List>
           <List component="div" disablePadding>
             <ListItemButton  sx={{ pl: 4 }}>
@@ -85,6 +97,7 @@ function FileUpload(props) {
             </ListItemIcon>
             <ListItemText onClick={handleFolderClick} secondary="Folder" />
             </ListItemButton>
+            <Button onClick={(e) => handleFolderSubmit(e)} >Upload</Button>
           </List>
         </Collapse>
       </List>
